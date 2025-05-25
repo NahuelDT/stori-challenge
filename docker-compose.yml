@@ -1,0 +1,64 @@
+services:
+  processor:
+    build: .
+    container_name: stori-processor
+    environment:
+      - ENVIRONMENT=${ENVIRONMENT}
+      - LOG_LEVEL=${LOG_LEVEL}
+      - WATCH_DIRECTORY=${WATCH_DIRECTORY}
+      - PROCESSED_DIRECTORY=${PROCESSED_DIRECTORY}
+      - RECIPIENT_EMAIL=${RECIPIENT_EMAIL}
+      # SMTP Configuration
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USERNAME=${SMTP_USERNAME}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+      - SMTP_FROM=${SMTP_FROM}
+      # Database Configuration
+      - DB_HOST=postgres
+      - DB_PORT=${DB_PORT}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - DB_SSLMODE=${DB_SSLMODE}
+    volumes:
+      - ./data:/data
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    networks:
+      - stori-network
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: stori-postgres
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - stori-network
+    restart: unless-stopped
+
+  # Optional: Database administration tool
+  adminer:
+    image: adminer:latest
+    container_name: stori-adminer
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - stori-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  stori-network:
+    driver: bridge
