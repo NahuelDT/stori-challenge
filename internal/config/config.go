@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/tartoide/stori/stori-challenge/internal/infrastructure/database"
-	"github.com/tartoide/stori/stori-challenge/internal/infrastructure/email"
+	"github.com/NahuelDT/stori-challenge/internal/infrastructure/database"
+	"github.com/NahuelDT/stori-challenge/internal/infrastructure/email"
 )
 
 type Config struct {

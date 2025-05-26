@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/NahuelDT/stori-challenge/internal/domain"
+	"github.com/NahuelDT/stori-challenge/internal/services"
 	"github.com/fsnotify/fsnotify"
-	"github.com/tartoide/stori/stori-challenge/internal/domain"
-	"github.com/tartoide/stori/stori-challenge/internal/services"
 )
 
 type csvFileProcessor struct {

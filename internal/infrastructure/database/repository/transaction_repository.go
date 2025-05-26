@@ -7,8 +7,8 @@ import (
 	"log/slog"
 	"time"
 
+	"github.com/NahuelDT/stori-challenge/internal/domain"
 	"github.com/shopspring/decimal"
-	"github.com/tartoide/stori/stori-challenge/internal/domain"
 )
 
 type TransactionRepository struct {
@@ -118,9 +118,9 @@ func (r *TransactionRepository) GetByAccount(ctx context.Context, accountID stri
 
 // GetByDateRange retrieves transactions for an account within a date range
 func (r *TransactionRepository) GetByDateRange(ctx context.Context, accountID string, startDate, endDate time.Time) ([]domain.Transaction, error) {
-	r.logger.Debug("retrieving transactions by date range", 
-		"account_id", accountID, 
-		"start_date", startDate.Format("2006-01-02"), 
+	r.logger.Debug("retrieving transactions by date range",
+		"account_id", accountID,
+		"start_date", startDate.Format("2006-01-02"),
 		"end_date", endDate.Format("2006-01-02"))
 
 	query, err := r.loader.GetQuery("GetTransactionsByDateRange")

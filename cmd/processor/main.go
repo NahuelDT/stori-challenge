@@ -7,11 +7,11 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/tartoide/stori/stori-challenge/internal/config"
-	"github.com/tartoide/stori/stori-challenge/internal/infrastructure/database"
-	"github.com/tartoide/stori/stori-challenge/internal/infrastructure/email"
-	"github.com/tartoide/stori/stori-challenge/internal/infrastructure/file"
-	"github.com/tartoide/stori/stori-challenge/internal/services"
+	"github.com/NahuelDT/stori-challenge/internal/config"
+	"github.com/NahuelDT/stori-challenge/internal/infrastructure/database"
+	"github.com/NahuelDT/stori-challenge/internal/infrastructure/email"
+	"github.com/NahuelDT/stori-challenge/internal/infrastructure/file"
+	"github.com/NahuelDT/stori-challenge/internal/services"
 )
 
 func main() {

@@ -1,6 +1,6 @@
 package services
 
-import "github.com/tartoide/stori/stori-challenge/internal/domain"
+import "github.com/NahuelDT/stori-challenge/internal/domain"
 
 type summaryCalculator struct{}
 

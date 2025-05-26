@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/shopspring/decimal"
-	"github.com/tartoide/stori/stori-challenge/internal/domain"
+	"github.com/NahuelDT/stori-challenge/internal/domain"
 )
 
 // FileProcessor handles file processing operations

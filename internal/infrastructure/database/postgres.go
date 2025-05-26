@@ -7,11 +7,11 @@ import (
 	"fmt"
 	"log/slog"
 
+	"github.com/NahuelDT/stori-challenge/internal/domain"
+	"github.com/NahuelDT/stori-challenge/internal/infrastructure/database/repository"
+	"github.com/NahuelDT/stori-challenge/internal/services"
 	_ "github.com/lib/pq"
 	"github.com/shopspring/decimal"
-	"github.com/tartoide/stori/stori-challenge/internal/domain"
-	"github.com/tartoide/stori/stori-challenge/internal/infrastructure/database/repository"
-	"github.com/tartoide/stori/stori-challenge/internal/services"
 )
 
 //go:embed migrations/*.sql

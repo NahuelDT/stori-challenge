@@ -1,4 +1,4 @@
-module github.com/tartoide/stori/stori-challenge
+module github.com/NahuelDT/stori-challenge
 
 go 1.24.1
 

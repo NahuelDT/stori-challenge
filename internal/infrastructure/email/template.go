@@ -7,7 +7,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/tartoide/stori/stori-challenge/internal/domain"
+	"github.com/NahuelDT/stori-challenge/internal/domain"
 )
 
 const emailTemplate = `<!DOCTYPE html>
