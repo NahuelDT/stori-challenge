@@ -4,14 +4,12 @@ A robust Go application that processes CSV transaction files and sends email sum
 
 ## Features
 
-✅ **Core Requirements**
 - CSV transaction file processing with validation
 - Email summary generation with HTML formatting
 - Monthly transaction grouping and statistics
 - Average credit/debit amount calculations
 - Docker containerization
 
-✅ **Bonus Features**
 - PostgreSQL database integration for transaction persistence
 - Styled HTML emails with responsive design
 - File watching for automated processing
