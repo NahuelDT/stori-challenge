@@ -203,7 +203,7 @@ SMTP_HOST=smtp.sendgrid.net
 SMTP_PORT=587
 ```
 
-## Database Features (Bonus)
+## Database Features
 
 When database configuration is provided:
 
@@ -261,13 +261,6 @@ docker run -d \
   stori-processor:latest
 ```
 
-### AWS Lambda (Bonus)
-
-For serverless deployment:
-1. Modify the main function to handle Lambda events
-2. Use AWS SES for email delivery
-3. Use S3 for file storage and triggers
-4. Use RDS for database persistence
 
 ## Troubleshooting
 
